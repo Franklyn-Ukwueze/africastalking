@@ -62,6 +62,7 @@ def ussd_callback():
         details = mycol.insert_one({"Account number":acc_number, "Amount":amount, "Bank":bank})
     else:
         response = "END Transaction failed."
+    return response
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=os.environ.get("PORT"))            
